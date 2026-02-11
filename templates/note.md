@@ -1,13 +1,10 @@
 # {{title}}
 
 Created: {{date:YYYY-MM-DD}}
-Tags: 
+Tags:
 
 ## Summary
 
-
 ## Details
 
-
 ## References
-

@@ -54,18 +54,24 @@ done
 
 # Check git configuration
 echo -e "\nChecking git configuration..."
-if git config user.name >/dev/null 2>&1; then
-	echo -e "  ${GREEN}✓${NC} Git user.name configured"
-else
-	echo -e "  ${YELLOW}⚠${NC} Git user.name not configured"
-	((WARNINGS++))
-fi
 
-if git config user.email >/dev/null 2>&1; then
-	echo -e "  ${GREEN}✓${NC} Git user.email configured"
+# In CI environment, git config is optional
+if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
+	echo -e "  ${YELLOW}ℹ${NC} Running in CI environment - skipping git config checks"
 else
-	echo -e "  ${YELLOW}⚠${NC} Git user.email not configured"
-	((WARNINGS++))
+	if git config user.name >/dev/null 2>&1; then
+		echo -e "  ${GREEN}✓${NC} Git user.name configured"
+	else
+		echo -e "  ${YELLOW}⚠${NC} Git user.name not configured"
+		((WARNINGS++))
+	fi
+
+	if git config user.email >/dev/null 2>&1; then
+		echo -e "  ${GREEN}✓${NC} Git user.email configured"
+	else
+		echo -e "  ${YELLOW}⚠${NC} Git user.email not configured"
+		((WARNINGS++))
+	fi
 fi
 
 # Check for .env file
