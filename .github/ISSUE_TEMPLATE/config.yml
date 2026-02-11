@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/professoroakz/obsidian-pub/discussions
+    about: Ask questions and discuss ideas
+  - name: 📚 Documentation
+    url: https://github.com/professoroakz/obsidian-pub#readme
+    about: Read the documentation
+  - name: 🔒 Security
+    url: https://github.com/professoroakz/obsidian-pub/security
+    about: Report security vulnerabilities
