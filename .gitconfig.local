@@ -1,0 +1,36 @@
+# Obsidian Configuration
+[core]
+	ignorecase = true
+	precomposeunicode = true
+	
+[pull]
+	rebase = true
+
+[push]
+	default = current
+
+[alias]
+	# Vault specific aliases
+	st = status -sb
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = log --graph --oneline --all
+	
+	# Vault sync shortcuts
+	sync = "!f() { git pull --rebase && git add -A && git commit -m \"vault sync $(date '+%Y-%m-%d %H:%M')\" || true && git push; }; f"
+	backup = "!f() { git add -A && git commit -m \"backup $(date '+%Y-%m-%d %H:%M')\"; }; f"
+
+[diff]
+	tool = default
+
+[merge]
+	tool = default
+	conflictstyle = diff3
+
+[user]
+	# Override with your details
+	# name = Your Name
+	# email = your.email@example.com

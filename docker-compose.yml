@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  obsidian-pub:
+    build:
+      context: .
+      target: dev
+    container_name: obsidian-pub
+    volumes:
+      - .:/workspace
+      - ~/.gitconfig:/home/obsidian/.gitconfig:ro
+    working_dir: /workspace
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+
+  obsidian-pub-cli:
+    build:
+      context: .
+      target: prod
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    entrypoint: ["obsidian-pub"]
+    command: ["--help"]

@@ -1,3 +1,4 @@
+# OS specific
 # Obsidian
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
@@ -16,26 +17,78 @@ Thumbs.db
 desktop.ini
 
 # Temporary files
-*.tmp
-*~
 *.swp
 *.swo
+*~
+.tmp
+*.log
 *.bak
+*.backup
+*.tmp
 
-# Build artifacts
-node_modules/
-dist/
-build/
+# Obsidian workspace
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
 
-# Environment
-.env
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Local configuration
 .env.local
+.env
 .env.*.local
 
-# Logs
-*.log
+# Build artifacts
+dist/
+build/
+out/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.dylib
+*.dll
+*.o
+*.a
+*.out
+
+# Dependencies
+node_modules/
+.pnpm-store/
+venv/
+env/
+ENV/
+
+# Backup files
+.dotfiles_backup_*
+*.old
+backups/
+
+# Sync conflicts
+*conflict*.md
+
+# Package managers
+*.egg
+*.whl
+package-lock.json
+yarn.lock
 npm-debug.log*
 
 # Archives
 *.tar.gz
 *.zip
+*.tar
+
+# C/C++ build
+c_src/build/
+
+# Docker
+.dockerignore
+
