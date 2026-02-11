@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Initial repository structure
 - .gitignore for Obsidian and markdown files
 - MIT License
@@ -21,17 +22,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Scripts for automation
 
 ### Changed
+
 - Updated README with comprehensive documentation
 
 ### Fixed
+
 - N/A
 
 ### Removed
+
 - N/A
 
 ## [0.1.0] - 2026-02-11
 
 ### Added
+
 - Initial commit
 - Basic README
 

@@ -3,7 +3,8 @@
 # verify.sh - Verify repository structure and configuration
 # Usage: ./verify.sh
 
-set -e
+# Note: not using set -e because we want to continue even when checks fail
+# and report all issues at the end
 
 # Colors
 GREEN='\033[0;32m'

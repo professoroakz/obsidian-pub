@@ -50,7 +50,8 @@ When using this repository:
 ## Contact
 
 For security concerns:
+
 - Create a security advisory on GitHub
-- Email: professoroakz@users.noreply.github.com
+- Email: <professoroakz@users.noreply.github.com>
 
 Thank you for helping keep obsidian-pub secure! 🔒
