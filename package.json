@@ -1,0 +1,43 @@
+{
+  "name": "obsidian-pub",
+  "version": "0.1.0",
+  "description": "A command-line tool for managing Obsidian markdown notes with git",
+  "main": "index.js",
+  "bin": {
+    "obsidian-pub": "./bin/obsidian-pub.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build step required\"",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "keywords": [
+    "obsidian",
+    "markdown",
+    "notes",
+    "git",
+    "vault",
+    "cli",
+    "sync"
+  ],
+  "author": "professoroakz <professoroakz@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/professoroakz/obsidian-pub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/professoroakz/obsidian-pub/issues"
+  },
+  "homepage": "https://github.com/professoroakz/obsidian-pub#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  }
+}

@@ -1,0 +1,79 @@
+# Git Attributes for Obsidian Vault
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Markdown files
+*.md text diff=markdown
+
+# Documents
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+
+# Fonts
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Audio
+*.mp3 binary
+*.wav binary
+*.ogg binary
+
+# Video
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.mkv binary
+
+# Obsidian specific
+*.canvas binary
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Configuration
+*.json text
+*.yml text
+*.yaml text
+*.toml text
+*.ini text
+
+# Python
+*.py text diff=python
+*.pyx text diff=python
+*.pyd binary
+
+# JavaScript/Node
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+
+# Docker
+Dockerfile text
+*.dockerignore text
+
+# Makefile
+Makefile text
+*.mk text

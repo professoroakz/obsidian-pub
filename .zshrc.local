@@ -1,0 +1,39 @@
+# Zsh configuration for obsidian-pub development
+
+# Vault root directory
+export OBSIDIAN_VAULT_ROOT="${0:A:h}"
+
+# Add scripts to PATH
+export PATH="$OBSIDIAN_VAULT_ROOT/scripts:$PATH"
+
+# Python virtual environment
+if [ -d "$OBSIDIAN_VAULT_ROOT/venv" ]; then
+    source "$OBSIDIAN_VAULT_ROOT/venv/bin/activate"
+fi
+
+# Aliases
+alias ovault='cd "$OBSIDIAN_VAULT_ROOT"'
+alias osync='make sync'
+alias obackup='make backup'
+alias ostats='make stats'
+alias oinit='make init'
+
+# Functions
+vault-search() {
+    grep -r "$1" "$OBSIDIAN_VAULT_ROOT" --include="*.md" --exclude-dir=".git" --exclude-dir="node_modules"
+}
+
+vault-tags() {
+    make list-tags
+}
+
+vault-count() {
+    make stats
+}
+
+# Auto-completion
+compdef _make make
+
+echo "Obsidian Pub environment loaded (zsh)"
+echo "Vault: $OBSIDIAN_VAULT_ROOT"
+echo "Type 'ovault' to go to vault root"

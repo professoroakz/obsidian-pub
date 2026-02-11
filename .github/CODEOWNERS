@@ -1,0 +1,28 @@
+# Code Owners
+# These owners will be the default owners for everything in the repo
+# They will be requested for review when someone opens a pull request
+
+# Global owners
+* @professoroakz
+
+# Documentation
+*.md @professoroakz
+/docs/ @professoroakz
+
+# Configuration files
+/.github/ @professoroakz
+Makefile @professoroakz
+*.toml @professoroakz
+*.json @professoroakz
+
+# Python package
+/obsidian_pub/ @professoroakz
+setup.py @professoroakz
+pyproject.toml @professoroakz
+
+# Scripts
+/scripts/ @professoroakz
+
+# Docker
+Dockerfile @professoroakz
+docker-compose.yml @professoroakz
